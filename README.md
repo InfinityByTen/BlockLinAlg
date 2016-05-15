@@ -1,6 +1,11 @@
 # BlockLinAlg
-Scipy and Numpy based module for Linear Algebra Routines with blocked structure
+BlockLinAlg is planned to be a Scipy and Numpy based module for Linear Algebra Routines with blocked structure
 
-Just a basic outline for now. BlockVector __add__ works with a warning. To be seen how to handle that. A verification function to be added.
+This is the setup for a Block Class that encapsulates different matrices. numpy dense and scipy sparse are direct targets for now. Eventually the possibility of type agnostic matrices can be considered. 
 
-BlockMatrix is more set up. Will have to setup a matrix-vector product. 
+The BlockMatrix and the upcoming BlockVector classes are planned to be derived classes of scipy.ndarray to make the background work smoothly. A way to restrict / cast the ndarray elements to Block objects is sought.
+
+This piece of software is still under active development (as on May 2016); comments, suggestions and improvements are always welcome. At the juncture, this is an incomplete, yet functional outline for the intended module. Kindly direct your correspondence to  dua<at>math<dot>tu<hyphen>berlin<dot>de.
+
+Cheers!
+Aseem Dua
