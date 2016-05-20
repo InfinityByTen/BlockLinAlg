@@ -7,5 +7,12 @@ The BlockMatrix and the upcoming BlockVector classes are planned to be derived c
 
 This piece of software is still under active development (as on May 2016); comments, suggestions and improvements are always welcome. At the juncture, this is an incomplete, yet functional outline for the intended module. Kindly direct your correspondence to  dua |at| math |dot| tu |hyphen| berlin |dot| de.
 
+# Test
+
+To run the tests, simply type
+```
+nosetests
+```
+
 Cheers!
 Aseem Dua
