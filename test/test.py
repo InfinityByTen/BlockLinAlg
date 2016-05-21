@@ -1,6 +1,12 @@
 import blocklinalg
 
 def test0():
+    # from scipy.sparse import coo_matrix, csc_matrix
+    # A = coo_matrix([[1, 2], [3, 4]])
+    # B = coo_matrix([[5],[6]]) 
+    # C = csc_matrix([[7]])
+    # BM = blocklinalg.BlockMatrix([[A, B], [None, C]])
+
     # @aseem Insert some code here that you want to work, e.g.,
     #
     #  A00 = np.array([[1]])
