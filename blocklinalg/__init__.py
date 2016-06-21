@@ -47,12 +47,8 @@ class Block(object):
         else:
             return None
 
-    def __getattr__(self, attr):
-
-        try:
-            return getattr(self.matrix,attr)
-        except AttributeError:
-            raise AttributeError('Given Block does not have attribute', attr)
+    def transpose(self):
+        return Block(self.matrix.transpose())
 
     def dot(self, other):
 
@@ -63,6 +59,14 @@ class Block(object):
             return Block(self.matrix.dot(other.matrix))
         else:
             return None
+
+    def __getattr__(self, attr):
+
+        try:
+            return getattr(self.matrix,attr)
+        except AttributeError:
+            raise AttributeError('Given Block does not have attribute', attr)
+
 
 
 
