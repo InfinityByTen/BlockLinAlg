@@ -142,15 +142,3 @@ class BlockMatrix(np.ndarray):
         
         if obj is None:
             return None
-
-    def transpose(self):
-        try:
-            T = super(BlockMatrix,self).transpose()
-        except AttributeError:
-            raise AttributeError('Block Matrix Transpose failed. No attribute found')
-        
-        for i in range(T.shape[0]):
-            for j in range(T.shape[1]):
-                if T[i,j].matrix is not None:
-                    T[i,j] = T[i,j].transpose()
-        return T
