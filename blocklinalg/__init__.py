@@ -142,3 +142,14 @@ class BlockMatrix(np.ndarray):
         
         if obj is None:
             return None
+            
+    def transpose(self):
+        T = np.empty(self.shape,dtype=object)
+        
+        for i in range(self.shape[0]):
+            for j in range(self.shape[1]):
+                if self[i,j].matrix is not None:
+                    T[i,j] = self[i,j].matrix.transpose()
+        
+        T = T.transpose()
+        return BlockMatrix(T)
